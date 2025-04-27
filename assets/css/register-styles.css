@@ -1,0 +1,251 @@
+body {
+    background-color: #121212; /* Darker background */
+    color: #e0e0e0; /* Lighter text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.registration-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.registration-form {
+    background-color: #1a1a1a;
+    border: 2px solid #d4af37; /* Subtle gold border */
+    box-shadow: 0 0 15px 5px rgba(212, 175, 55, 0.3); /* Lighter shadow */
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Creepster', cursive;
+    font-size: 2.5em; /* Restore previous font size */
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    position: static; /* Change to static */
+    transform: none; /* Remove transform */
+    background-color: transparent; /* Remove background */
+    padding: 0; /* Remove padding */
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+
+label {
+    width: 35%;
+    text-align: right;
+    margin-right: 15px;
+    font-size: 1.1em;
+    color: #bdbdbd; /* Lighter label color */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"] {
+    width: 65%;
+    padding: 12px;
+    border: 1px solid #555; /* Darker input border */
+    background-color: #282828;
+    color: #e0e0e0; /* Lighter input text */
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.event-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.event-checkboxes label {
+    width: 45%;
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 1em;
+    color: #bdbdbd; /* Lighter checkbox label */
+}
+
+.submit-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.register-btn {
+    background-color: #d4af37; /* Muted gold button */
+    color: #1a1a1a; /* Darker button text */
+    padding: 18px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Lighter button shadow */
+}
+
+.register-btn:hover {
+    background-color: #c29f30; /* Darker muted gold on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* team disclaimer */
+
+.disclaimer {
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #bdbdbd;
+}
+
+.registration-links {
+    margin-top: 30px;
+}
+
+.link-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.link-item a {
+    font-size: 1.5em;
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-item a:hover {
+    color: #e6c200;
+}
+
+.description {
+    color: #bdbdbd;
+    margin-top: 5px;
+}
+
+/* team submisson */
+
+.team-submission {
+    margin-top: 20px;
+}
+.team-note-box {
+    background-color: #282828; /* Darker background for note box */
+    border: 1px solid #555; /* Dark border */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.team-note {
+    font-style: italic;
+    color: #bdbdbd;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.event-checkboxes {
+list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.team-events {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+
+.team-events label {
+    width: 30%;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 1em;
+    color: #bdbdbd;
+    display: flex;
+    align-items: center;
+}
+.event-checkboxes label {
+    display: flex;
+    align-items: center;
+}
+
+.team-members label {
+    display: block;
+    margin-bottom: 5px;
+    color: #bdbdbd;
+    text-align: left; /* Align label to left */
+}
+
+.team-members textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #282828;
+    color: #e0e0e0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 1em;
+    resize: vertical; /* Allow vertical resizing */
+}
+.event-checkboxes input[type="checkbox"], .team-events input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .event-checkboxes label, .team-events label {
+        flex-direction: row; /* Ensure proper alignment */
+    }
+
+    .event-checkboxes input[type="checkbox"], .team-events input[type="checkbox"] {
+        margin-right: 5px; /* Reduce spacing on mobile */
+    }
+
+    .team-members label {
+        text-align: left; /* Ensure label is left-aligned */
+    }
+}
+
+/* last date box */
+
+.last-date-box {
+    background-color: #282828; /* Darker background */
+    border: 1px solid #555; /* Dark border */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.last-date-text {
+    color: #bdbdbd; /* Lighter text color */
+    margin: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .last-date-box {
+        padding: 10px; /* Reduced padding on mobile */
+        margin-top: 15px; /* Reduced margin on mobile */
+    }
+
+    .last-date-text {
+        font-size: 0.9em; /* Smaller font on mobile */
+    }
+}
