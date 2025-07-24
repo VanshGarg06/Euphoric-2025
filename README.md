@@ -16,8 +16,14 @@
 
 ## 🖼️ Preview
 
-> 📸 *Screenshots of the updated UI will be added soon.*
+A quick look at the Euphoric 2025 interface:
 
+| Landing Page | Event Cards    | Registeration  |
+|------------|--------------------------|--------------------------|
+| ![Home](img/screenshots/image.png) | ![event_cards](img/screenshots/event_cards.png) | ![registeration](img/screenshots/registeration.png) |
+
+
+> 📸 These screenshots will be updated with any changes to the website's UI, code, or features to reflect the latest version of the web platform.
 
 ---
 
@@ -84,7 +90,9 @@ Euphoric-2025/
 |------------|--------------------------|
 | HTML       | Markup / Structure       |
 | CSS        | Styling / Layout         |
-| JavaScript | Optional – for interactivity |
+| JavaScript | Frontend interactivity (likely in the js/ folder) |
+| PHP | Server-side scripting (for dynamic content and forms) |
+| MySQL | Database (assumed based on the presence of `database.php` and `db_operations.php`) |
 
 
 ---
