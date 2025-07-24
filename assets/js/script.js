@@ -82,3 +82,18 @@ eventItems.forEach(item => {
 });
 
 // ... (rest of your JavaScript code) ...
+document.addEventListener("DOMContentLoaded", function () {
+  const menuTrigger = document.getElementById("menu-trigger");
+  const navbarLinks = document.querySelector(".navbar-links");
+
+  menuTrigger.addEventListener("click", function () {
+    navbarLinks.classList.toggle("active");
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("assets/navbar.html")
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+});
