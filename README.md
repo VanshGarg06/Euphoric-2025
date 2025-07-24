@@ -56,32 +56,66 @@ Euphoric-2025/
 
 ---
 
-## 🛠️ Installation
+##🛠️ Installation Guide
+Follow the steps below to set up the **Euphoric-2025** website locally on your machine. You can choose between running the project directly or using a development server for a more interactive experience.
 
-You can run the website locally in a few simple steps:
+1. 📥 **Clone the Repository**
+    First, you’ll need to clone the project repository from GitHub to your local machine. Open your terminal and run the following command:
 
-1. 📥 Clone the Repository
-
+```bash
 git clone https://github.com/AshiTomar210/Euphoric-2025.git
+```
+This will create a copy of the repository in your current directory. Once it’s done, navigate into the project folder:
+
+```bash
 cd Euphoric-2025
+```
 
-2. 🖥️ Run Locally
+2. 🖥️ **Running Locally**
+There are two easy ways to view the project locally on your machine:
 
-There are two easy ways:
+ - **Option A: Open Directly in Browser**
+This is the simplest way to view the project:
 
-✅ Option A: Open directly
+Navigate to the **Euphoric-2025** folder where you cloned the repository.
 
-Double-click index.html to view in your browser
+Locate the index.html file.
 
+Double-click on index.html to open it directly in your browser.
 
-✅ Option B: Use Live Server (Recommended for development)
+Note: This method works well for viewing the project, but it does not support dynamic features like live reloading. For a better development experience, see Option B.
 
-If using VS Code, install the Live Server extension
+ - **Option B: Run with Live Server (Recommended for Development)**
+For a more interactive experience (including features like live reloading when changes are made to the project files), use the Live Server extension in Visual Studio Code (VS Code).
 
-Right-click index.html → Open with Live Server
+1. If you haven’t already, download and install Visual Studio Code.
 
+2. Open your project folder in VS Code:
 
+```bash
+code .
+```
+3. Install the Live Server extension from the VS Code marketplace:
 
+    1. Go to the Extensions view in VS Code (click the Extensions icon in the Activity Bar on the side of the window).
+
+    2. Search for **Live Server** and click Install.
+
+4. Once installed, right-click on the index.html file in the Explorer pane and choose **Open with Live Server**.
+
+Your project will automatically open in your default browser, and any changes you make to the code will be reflected instantly without needing to manually refresh the page.
+
+3. **Troubleshooting**
+If you encounter any issues during installation, here are a few common fixes:
+
+- Live Server not working?
+Ensure that you have the Live Server extension installed and activated in VS Code. You may need to restart VS Code after installation.
+
+- Browser not opening?
+If you're using Option A and double-clicking the index.html doesn’t work, try right-clicking the file and selecting Open with → your preferred browser.
+
+- Git clone not working?
+If you get an error when cloning the repo, ensure that you have Git installed on your machine. You can install Git from here.
 
 ---
 
