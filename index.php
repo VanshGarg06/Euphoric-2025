@@ -14,7 +14,6 @@
 <body>
 
     <div id="navbar-container"></div>
-
     <div class="content">
         <h1>Euphoric 2025</h1>
         <div class="slider-container">
