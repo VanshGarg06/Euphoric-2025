@@ -19,10 +19,12 @@
 <ul class="navbar-links" id="navLinks">
   <li><a href="#preview">Preview</a></li>
   <li><a href="#features">Features</a></li>
-  <li><a href="#installation">Installation</a></li>
-  <li><a href="#projectStruct">Structure</a></li>
-  <li><a href="#contribution">Contributing</a></li>
+  <li><a href="#projectStruct">Project Structure</a></li>
   <li><a href="#techStack">Tech Stack</a></li>
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#contribution">Contribution Guidelines</a></li>
+  <li><a href="#gssoc">GSSoC 2025</a></li>
+  <li><a href="#maintainer">Maintainer</a></li>
 </ul>
 
 
@@ -253,7 +255,7 @@ This project is part of **GSSoC '25**, a nationwide initiative encouraging stude
 ---
 
 
-## 🙋 Maintainer
+<h2 id="maintainer"> 🙋 Maintainer </h2>
 
 Built with 💜 by @AshiTomar210
 
