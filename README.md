@@ -3,7 +3,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/GSSoC-2025-orange" alt="GSSoC 2025 Badge" />
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg" alt="Contributions Welcome" />
-  <img src="https://img.shields.io/github/license/AshiTomar210/Euphoric-2025" alt="License" />
+  <img src="https://img.shields.io/github/issues/AshiTomar210/Euphoric-2025" alt="Open Issues" />
+  
 </p>
 
 **Euphoric 2025** is a campus-centric web platform designed to manage **event registrations**, share **important announcements**, and **showcase student-led activities**. Created for Euphoric Fest, it offers a central space for students to stay updated and involved.
@@ -92,8 +93,6 @@ Euphoric-2025/
 | CSS        | Styling / Layout         |
 | JavaScript | Frontend interactivity (likely in the js/ folder) |
 | PHP | Server-side scripting (for dynamic content and forms) |
-| MySQL | Database (assumed based on the presence of `database.php` and `db_operations.php`) |
-
 
 ---
 
