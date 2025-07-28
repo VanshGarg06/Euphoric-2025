@@ -82,11 +82,11 @@ Each PR is labeled by difficulty:
 
 Level      	Description
 
-Level 1 🥇	Backend PHP/SQL logic, full feature
+Level 1 🥉	HTML/CSS styling, text updates, small bug fixes
 
 Level 2 🥈	JavaScript interactivity, UI+form integration
 
-Level 3 🥉	HTML/CSS styling, text updates, small bug fixes
+Level 3 🥇	Backend PHP/SQL logic, full feature
 
 
 
