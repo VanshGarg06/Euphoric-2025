@@ -63,6 +63,18 @@ A quick look at the Euphoric 2025 interface:
 - 💻 **Lightweight & Fast**  
   No frameworks – just clean, structured code for optimal speed.
 
+- 🕒 **Event Schedule**  
+  Detailed schedule of each event to help participants plan ahead.
+
+- 📍 **Venue Information**  
+  Clear and accessible details about event locations.
+
+- 👥 **Coordinator Details**  
+  Contact information of event coordinators for queries and assistance.
+
+- 📜 **Event Rules**  
+  Complete guidelines and rules for participation to ensure fair competition.
+
 
 ---
 
