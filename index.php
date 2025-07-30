@@ -108,10 +108,19 @@
         </div>
         <div class="gallery-preview">
             <h2>Gallery Highlights</h2>
-            <div class="gallery-images">
+            <div class="gallery-images scrolling-track">
                 <img src="img/image1.jpg" alt="Gallery Image 1">
-                <img src="img/image1.jpg" alt="Gallery Image 2">
-                <img src="img/image1.jpg" alt="Gallery Image 3">
+                <img src="img/image2.jpg" alt="Gallery Image 2">
+                <img src="img/image3.jpg" alt="Gallery Image 3">
+                <img src="img/image4.jpg" alt="Gallery Image 4">
+                <img src="img/image5.jpg" alt="Gallery Image 5">
+
+                <!-- Duplicates for infinite scroll -->
+                <img src="img/image1.jpg" alt="Gallery Image 1 Duplicate">
+                <img src="img/image2.jpg" alt="Gallery Image 2 Duplicate">
+                <img src="img/image3.jpg" alt="Gallery Image 3 Duplicate">
+                <img src="img/image4.jpg" alt="Gallery Image 4 Duplicate">
+                <img src="img/image5.jpg" alt="Gallery Image 5 Duplicate">
             </div>
             <a href="gallery.html" class="view-more-btn">View More</a>
         </div>
