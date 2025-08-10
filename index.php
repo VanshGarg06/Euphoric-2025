@@ -14,6 +14,7 @@
 <body>
 
     <div id="navbar-container"></div>
+
     <div class="content">
         <h1>Euphoric 2025</h1>
         <div class="slider-container">
@@ -40,8 +41,7 @@
         <div class="guests-block">
             <h2>Our Guests</h2>
             <div class="guests-row">
-                <!-- Remove guest-box if you want only "To be updated" -->
-                <div class="update-box">
+                <div class="guest-box">
                     <h3>To be updated...</h3>
                     <!-- <div class = "guest-image-container">
                         <img src="img/darshan.jpg" alt="Guest 1 Image" class="guest-image">
@@ -109,25 +109,28 @@
         <div class="gallery-preview">
             <h2>Gallery Highlights</h2>
             <div class="gallery-images scrolling-track">
-                <img src="img/image1.jpg" alt="Gallery Image 1">
-                <img src="img/image2.jpg" alt="Gallery Image 2">
-                <img src="img/image3.jpg" alt="Gallery Image 3">
-                <img src="img/image4.jpg" alt="Gallery Image 4">
-                <img src="img/image5.jpg" alt="Gallery Image 5">
-
                 <!-- Duplicates for infinite scroll -->
-                <img src="img/image1.jpg" alt="Gallery Image 1 Duplicate">
-                <img src="img/image2.jpg" alt="Gallery Image 2 Duplicate">
-                <img src="img/image3.jpg" alt="Gallery Image 3 Duplicate">
-                <img src="img/image4.jpg" alt="Gallery Image 4 Duplicate">
-                <img src="img/image5.jpg" alt="Gallery Image 5 Duplicate">
+            <img src="img/nimage1.jpg" alt="Gallery Image 2">
+            <img src="img/nimage2.jpg" alt="Gallery Image 1">
+            <img src="img/nimage3.jpg" alt="Gallery Image 3">
+            <img src="img/nimage4.jpg" alt="Gallery Image 4">
+            <img src="img/nimage15.jpg" alt="Gallery Image 6">
+            <img src="img/nimage14.jpg" alt="Gallery Image 6">
+            <img src="img/nimage5.jpg" alt="Gallery Image 6">
+            <img src="img/nimage6.jpg" alt="Gallery Image 5">
+            <img src="img/nimage7.jpg" alt="Gallery Image 6">
+            <img src="img/nimage8.jpg" alt="Gallery Image 6">
+            <img src="img/nimage9.jpg" alt="Gallery Image 6">
+            <img src="img/nimage10.jpg" alt="Gallery Image 6">
+            <img src="img/nimage11.jpg" alt="Gallery Image 6">
+            <img src="img/nimage12.jpg" alt="Gallery Image 6">
             </div>
             <a href="gallery.html" class="view-more-btn">View More</a>
         </div>
     </div>
 
     <div id="footer-container"></div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="assets/js/script.js"></script>
 
 </body>

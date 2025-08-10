@@ -1,5 +1,6 @@
 body {
-    /* No hardcoded background or color, use global variables */
+    background-color: #121212;
+    color: #e0e0e0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
@@ -18,8 +19,8 @@ body {
 .gallery-container h2 {
     font-family: 'Creepster', cursive;
     font-size: 2em;
-    color: var(--accent-color);
-    text-shadow: 2px 2px 4px var(--text-color);
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     margin-bottom: 20px;
 }
 
@@ -34,14 +35,14 @@ body {
     height: auto;
     margin: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px var(--card-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Mobile responsiveness */
 @media (max-width: 600px) {
     .gallery-container {
-        width: 100%;
-        padding: 0 10px;
+        width: 100%; /* Adjusted container width */
+        padding: 0 10px; /* Added padding */
     }
 
     .gallery-images img {
