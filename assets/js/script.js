@@ -61,7 +61,6 @@ function toggleMenu(event) {
     const navbarLinks = document.querySelector('.navbar-links');
     navbarLinks.classList.toggle('active');
 }
-// ... (previous JavaScript code) ...
 
 // Intersection Observer for Events Animation
 const eventItems = document.querySelectorAll('.event-item');
@@ -81,4 +80,83 @@ eventItems.forEach(item => {
     observer.observe(item);
 });
 
-// ... (rest of your JavaScript code) ...
+// Scroll-to-top button functionality
+(function() {
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Support both possible ids used in your project
+        const btn = document.getElementById('backToTop') || document.getElementById('scrollToTop');
+        if (!btn) {
+            console.warn('Scroll-to-top button not found');
+            return;
+        }
+
+        // Ensure an accessible label exists
+        if (!btn.getAttribute('aria-label')) {
+            btn.setAttribute('aria-label', 'Scroll to top');
+        }
+
+        const SHOW_AFTER = 300; // px scrolled before showing button
+        let lastKnownScroll = 0;
+        let ticking = false;
+
+        function updateVisibility() {
+            const scrolled = window.scrollY || document.documentElement.scrollTop;
+            if (scrolled > SHOW_AFTER) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        }
+
+        function onScroll() {
+            lastKnownScroll = window.scrollY || document.documentElement.scrollTop;
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    updateVisibility();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        // Listen to scroll (passive for performance)
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        // Initial check (in case page loads scrolled)
+        updateVisibility();
+
+        // Click => smooth scroll to top
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Smooth scroll to top
+            window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth' 
+            });
+        });
+
+        // Keyboard support (Enter or Space)
+        btn.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                btn.click();
+            }
+        });
+
+        // Optional: Hide when reaching top quickly
+        window.addEventListener('scroll', function() {
+            if ((window.scrollY || document.documentElement.scrollTop) === 0) {
+                btn.classList.remove('show');
+            }
+        }, { passive: true });
+    });
+
+    // Fallback if DOMContentLoaded already fired
+    if (document.readyState === 'loading') {
+        // Do nothing, DOMContentLoaded will fire
+    } else {
+        // DOM is already ready
+        document.dispatchEvent(new Event('DOMContentLoaded'));
+    }
+})();
