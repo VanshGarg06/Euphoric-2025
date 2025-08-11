@@ -129,8 +129,10 @@
         </div>
     </div>
 
+    <button id="backToTop" title="Go to top" aria-label="Scroll to top">⇧</button>
+    
     <div id="footer-container"></div>
-
+    
     <script src="assets/js/script.js"></script>
 
 </body>
