@@ -33,7 +33,7 @@ $("#registrationForm").submit(function (e) {
                 // --- MODIFIED SECTION ---
                 if (response.trim() === "success") {
                     // Instead of showing a notification, redirect to the success page.
-                    window.location.href = './success.php';
+                    window.location.href = '/success.php';
                 } else {
                     // If there's an error, show the notification as before.
                     new Notify({
@@ -59,3 +59,4 @@ $("#registrationForm").submit(function (e) {
     }
 
 });
+
