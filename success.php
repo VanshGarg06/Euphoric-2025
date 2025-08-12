@@ -67,7 +67,7 @@ unset($_SESSION['registration_data']);
             </div>
 
             <div class="nav-buttons">
-                <a href="/Euphoric-2025/index.php" class="button-link">Return Home</a>
+                <a href="/index.php" class="button-link">Return Home</a>
                 <a href="includes/register-links.php" class="button-link secondary">Register Another</a>
             </div>
         </div>
