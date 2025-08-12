@@ -33,7 +33,7 @@ $("#registrationForm").submit(function (e) {
                 // --- MODIFIED SECTION ---
                 if (response.trim() === "success") {
                     // Redirect to the success page
-                    window.location.href = '/Euphoric-2025/success.php';
+                    window.location.href = './success.php';
                 } else {
                     // If there's an error, show it
                     new Notify({
@@ -57,4 +57,5 @@ $("#registrationForm").submit(function (e) {
             }
         });
     }
+
 });
