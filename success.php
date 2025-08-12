@@ -3,7 +3,7 @@ session_start();
 
 // Redirect if no data is found
 if (!isset($_SESSION['registration_data'])) {
-    header('Location: /index.php');
+    header('Location: ./index.php');
     exit();
 }
 
@@ -67,8 +67,8 @@ unset($_SESSION['registration_data']);
             </div>
 
             <div class="nav-buttons">
-                <a href="/index.php" class="button-link">Return Home</a>
-                <a href="/index.php" class="button-link secondary">Register Another</a>
+                <a href="./index.php" class="button-link">Return Home</a>
+                <a href="includes/register-links.php" class="button-link secondary">Register Another</a>
             </div>
         </div>
     </div>
