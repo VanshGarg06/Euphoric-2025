@@ -3,7 +3,7 @@ session_start();
 
 // Redirect if no data is found
 if (!isset($_SESSION['registration_data'])) {
-    header('Location: ./index.php');
+    header('Location: /index.php');
     exit();
 }
 
