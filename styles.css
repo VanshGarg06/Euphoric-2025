@@ -650,4 +650,73 @@ footer span {
   }
 }
 
+/* Scroll-to-top button (supports both ids used in your code) */
+#backToTop,
+#scrollToTop {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4af37 0%, #f0c96b 100%); /* golden gradient */
+  color: #111;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  font-size: 20px;
+  line-height: 1;
+  transform: translateY(20px) scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease, transform .35s cubic-bezier(.2,.9,.3,1), box-shadow .2s;
+}
+
+/* When visible */
+#backToTop.show,
+#scrollToTop.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Hover + focus */
+#backToTop:hover,
+#scrollToTop:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+
+#backToTop:focus,
+#scrollToTop:focus {
+  outline: 3px solid rgba(212,175,55,0.25);
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+/* Slightly smaller on very small screens */
+@media (max-width: 420px) {
+  #backToTop,
+  #scrollToTop {
+    width: 44px;
+    height: 44px;
+    right: 16px;
+    bottom: 18px;
+    font-size: 18px;
+  }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #backToTop,
+  #scrollToTop {
+    transition: none;
+  }
+}
 
