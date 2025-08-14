@@ -63,7 +63,7 @@ if ($_POST && isset($_POST['submit'])) {
         
         if (empty($message)) {
             try {
-                $stmt = $pdo->prepare("INSERT INTO lost_found_items (title, description, location, date_found, time_found, image_path, contact_info, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+                $stmt = $pdo->prepare("INSERT INTO lost_and_found (title, description, location, date_found, time_found, image_path, contact_info, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
                 $stmt->execute([$title, $description, $location, $date_found, $time_found, $image_path, $contact_info, $status]);
                 
                 $message = "Item posted successfully!";
@@ -103,7 +103,7 @@ if ($filter_status) {
 $where_clause = $where_conditions ? "WHERE " . implode(" AND ", $where_conditions) : "";
 $order_clause = "ORDER BY $sort_by";
 
-$stmt = $pdo->prepare("SELECT * FROM lost_found_items $where_clause $order_clause");
+$stmt = $pdo->prepare("SELECT * FROM lost_and_found $where_clause $order_clause");
 $stmt->execute($params);
 $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
