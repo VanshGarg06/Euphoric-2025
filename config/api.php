@@ -19,8 +19,8 @@ if (isset($_POST['form_action']) && $_POST['form_action'] == 'create_msa') {
 
     try {
         // Your database insertion logic remains the same
-        $query = "INSERT INTO cultural_data (name, branch, year, admissionId, phone, email, events) VALUES (:name, :branch, :year, :admissionId, :phone, :email, :events)";
-        $params = ['name' => $name, 'branch' => $branch, 'year' => $year, 'admissionId' => $admissionId, 'phone' => $phone, 'email' => $email, 'events' => $events];
+        $query = "INSERT INTO cultural_data (name, branch, year, admissionId, phone, email, events, team_members) VALUES (:name, :branch, :year, :admissionId, :phone, :email, :events, :team_members)";
+        $params = ['name' => $name, 'branch' => $branch, 'year' => $year, 'admissionId' => $admissionId, 'phone' => $phone, 'email' => $email, 'events' => $events, 'team_members' => $teamMembers];
 
         $lastInsertId = $obj->insert($query, $params);
 
@@ -29,6 +29,7 @@ if (isset($_POST['form_action']) && $_POST['form_action'] == 'create_msa') {
             $_SESSION['registration_data'] = [
                 'name' => $name,
                 'email' => $email,
+                'phone' => $phone,
                 'events' => $events,
                 'branch' => $branch,
                 'teamMembers' => isset($_POST['teamMembers']) ? htmlspecialchars($_POST['teamMembers']) : 'N/A',
@@ -47,4 +48,5 @@ if (isset($_POST['form_action']) && $_POST['form_action'] == 'create_msa') {
 } else {
     echo "error: Invalid request.";
 }
+
 ?>
