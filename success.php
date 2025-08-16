@@ -52,6 +52,10 @@ unset($_SESSION['registration_data']);
                     <span class="summary-label">Email</span>
                     <span class="summary-value"><?php echo htmlspecialchars($data['email']); ?></span>
                 </div>
+                   <div class="summary-item">
+                    <span class="summary-label">Phone</span>
+                    <span class="summary-value"><?php echo htmlspecialchars($data['phone']); ?></span>
+                </div>
                 <div class="summary-item">
                     <span class="summary-label">Events</span>
                     <span class="summary-value"><?php echo htmlspecialchars($data['events']); ?></span>
