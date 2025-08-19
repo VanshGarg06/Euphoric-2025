@@ -9,9 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loader">
+        <i class="fa-solid fa-spinner"></i>
+        <h2 id="loading-text">Ready for the fest<span class="dots"></span></h2>
+      </div>
+    </div>
 
     <div id="navbar-container"></div>
 
@@ -134,6 +145,33 @@
     <div id="footer-container"></div>
     
     <script src="assets/js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        const loadingText = document.getElementById("loading-text");
+
+        const texts = ["Ready for the fest", "Let's go"];
+
+        let index = 0;
+
+        // Change text every 4 seconds
+        const textInterval = setInterval(() => {
+          index = (index + 1) % texts.length;
+          loadingText.style.opacity = 0; // fade out
+          setTimeout(() => {
+            loadingText.innerHTML = texts[index] + '<span class="dots"></span>';
+            loadingText.style.opacity = 1; // fade in
+          }, 500);
+        }, 4000);
+
+        // Hide loading screen after 6 seconds
+        setTimeout(() => {
+          clearInterval(textInterval); // stop changing text
+          loadingScreen.classList.add("hidden");
+        }, 8000); // adjust as needed
+      });
+    </script>
 
 </body>
 
