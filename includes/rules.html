@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rules</title>
     <link rel="stylesheet" href="../assets/css/rules.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
+   
     <div class="rules-container">
+         <div id="navbar-container"></div>
         <div class="rules-block">
             <h2>Rules</h2>
 
@@ -64,5 +67,12 @@
 
         </div>
     </div>
+    <script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+</script>
 </body>
 </html>

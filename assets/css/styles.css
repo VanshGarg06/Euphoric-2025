@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  margin-top: 5%;
 
 }
 /* Main content area grows to fill space */
@@ -45,12 +46,15 @@ main.content, .content {
   color: var(--text-color);
   font-family: sans-serif;
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  z-index: 50;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
+
 
 .navbar-logo img {
   height: 60px;
