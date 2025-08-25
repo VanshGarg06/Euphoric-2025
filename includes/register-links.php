@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="../assets/css/register-styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
     <div class="registration-container">
+         <div id="navbar-container"></div>
         <div class="registration-form">
             <h2>Registration</h2>
             <!-- <div class="disclaimer">
@@ -32,5 +34,12 @@
             </div>
         </div>
     </div>
+      <script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+</script>
 </body>
 </html>
