@@ -9,11 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loader">
+        <i class="fa-solid fa-spinner"></i>
+        <h2 id="loading-text">Ready for the fest<span class="dots"></span></h2>
+      </div>
+    </div>
 
     <div id="navbar-container"></div>
+
     <div class="content">
         <h1>Euphoric 2025</h1>
         <div class="slider-container">
@@ -40,8 +52,7 @@
         <div class="guests-block">
             <h2>Our Guests</h2>
             <div class="guests-row">
-                <!-- Remove guest-box if you want only "To be updated" -->
-                <div class="update-box">
+                <div class="guest-box">
                     <h3>To be updated...</h3>
                     <!-- <div class = "guest-image-container">
                         <img src="img/darshan.jpg" alt="Guest 1 Image" class="guest-image">
@@ -109,26 +120,58 @@
         <div class="gallery-preview">
             <h2>Gallery Highlights</h2>
             <div class="gallery-images scrolling-track">
-                <img src="img/image1.jpg" alt="Gallery Image 1">
-                <img src="img/image2.jpg" alt="Gallery Image 2">
-                <img src="img/image3.jpg" alt="Gallery Image 3">
-                <img src="img/image4.jpg" alt="Gallery Image 4">
-                <img src="img/image5.jpg" alt="Gallery Image 5">
-
                 <!-- Duplicates for infinite scroll -->
-                <img src="img/image1.jpg" alt="Gallery Image 1 Duplicate">
-                <img src="img/image2.jpg" alt="Gallery Image 2 Duplicate">
-                <img src="img/image3.jpg" alt="Gallery Image 3 Duplicate">
-                <img src="img/image4.jpg" alt="Gallery Image 4 Duplicate">
-                <img src="img/image5.jpg" alt="Gallery Image 5 Duplicate">
+            <img src="img/nimage1.jpg" alt="Gallery Image 2">
+            <img src="img/nimage2.jpg" alt="Gallery Image 1">
+            <img src="img/nimage3.jpg" alt="Gallery Image 3">
+            <img src="img/nimage4.jpg" alt="Gallery Image 4">
+            <img src="img/nimage15.jpg" alt="Gallery Image 6">
+            <img src="img/nimage14.jpg" alt="Gallery Image 6">
+            <img src="img/nimage5.jpg" alt="Gallery Image 6">
+            <img src="img/nimage6.jpg" alt="Gallery Image 5">
+            <img src="img/nimage7.jpg" alt="Gallery Image 6">
+            <img src="img/nimage8.jpg" alt="Gallery Image 6">
+            <img src="img/nimage9.jpg" alt="Gallery Image 6">
+            <img src="img/nimage10.jpg" alt="Gallery Image 6">
+            <img src="img/nimage11.jpg" alt="Gallery Image 6">
+            <img src="img/nimage12.jpg" alt="Gallery Image 6">
             </div>
             <a href="gallery.html" class="view-more-btn">View More</a>
         </div>
     </div>
 
+    <button id="backToTop" title="Go to top" aria-label="Scroll to top">⇧</button>
+    
     <div id="footer-container"></div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script src="assets/js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        const loadingText = document.getElementById("loading-text");
+
+        const texts = ["Ready for the fest", "Let's go"];
+
+        let index = 0;
+
+        // Change text every 4 seconds
+        const textInterval = setInterval(() => {
+          index = (index + 1) % texts.length;
+          loadingText.style.opacity = 0; // fade out
+          setTimeout(() => {
+            loadingText.innerHTML = texts[index] + '<span class="dots"></span>';
+            loadingText.style.opacity = 1; // fade in
+          }, 500);
+        }, 4000);
+
+        // Hide loading screen after 6 seconds
+        setTimeout(() => {
+          clearInterval(textInterval); // stop changing text
+          loadingScreen.classList.add("hidden");
+        }, 8000); // adjust as needed
+      });
+    </script>
 
 </body>
 
