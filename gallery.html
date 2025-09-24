@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="assets/css/gallery-styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <div id="navbar-container"></div>
     <div class="gallery-container">
         <h2>Gallery</h2>
         <div class="gallery-images">
@@ -26,5 +28,27 @@
             <img src="img/nimage12.jpg" alt="Gallery Image 6">
             </div>
     </div>
+
+     <script>
+   
+    fetch("navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
+        });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const successMessage = document.querySelector('.message.success');
+        if (successMessage) {
+            setTimeout(function () {
+                successMessage.style.opacity = '0';
+                setTimeout(function () {
+                    successMessage.style.display = 'none';
+                }, 300);
+            }, 5000);
+        }
+    });
+</script>
+
 </body>
 </html>

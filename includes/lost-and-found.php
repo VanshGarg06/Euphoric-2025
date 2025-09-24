@@ -348,12 +348,13 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <script>
+        
         fetch("navbar.html")
             .then(res => res.text())
             .then(data => {
                 document.getElementById("navbar-container").innerHTML = data;
-            }); <
-        // Auto-hide success messages after 5 seconds
+            }); 
+       
         document.addEventListener('DOMContentLoaded', function() {
             const successMessage = document.querySelector('.message.success');
             if (successMessage) {
