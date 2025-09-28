@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -195,8 +196,7 @@
     <div id="footer-container"></div>
     
     <script src="assets/js/script.js"></script>
-
-    <script>
+     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const loadingScreen = document.getElementById("loading-screen");
         const loadingText = document.getElementById("loading-text");
@@ -222,6 +222,29 @@
         }, 8000); // adjust as needed
       });
     </script>
+<script>
+    // Load Navbar
+    fetch("navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
+        });
+
+   
+    document.addEventListener('DOMContentLoaded', function () {
+        const successMessage = document.querySelector('.message.success');
+        if (successMessage) {
+            setTimeout(function () {
+                successMessage.style.opacity = '0';
+                setTimeout(function () {
+                    successMessage.style.display = 'none';
+                }, 300);
+            }, 5000);
+        }
+    });
+</script>
+
+    
 
 </body>
 

@@ -34,12 +34,27 @@
             </div>
         </div>
     </div>
-      <script>
-  fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar-container").innerHTML = data;
+<script>
+  
+    fetch("navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
+        });
+
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        const successMessage = document.querySelector('.message.success');
+        if (successMessage) {
+            setTimeout(function () {
+                successMessage.style.opacity = '0';
+                setTimeout(function () {
+                    successMessage.style.display = 'none';
+                }, 300);
+            }, 5000);
+        }
     });
 </script>
+
 </body>
 </html>
