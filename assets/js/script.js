@@ -35,26 +35,27 @@ fetch("navbar.html")
 
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
-    if (themeToggle && themeIcon) {
-      // Always start in light mode
+    // Apply saved theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      document.body.classList.remove('light-mode');
+      themeIcon.textContent = '☀️';
+    } else {
       document.body.classList.remove('dark-mode');
       document.body.classList.add('light-mode');
+      themeIcon.textContent = '🌙';
+    }
+    // Theme toggle event listener
+    if (themeToggle && themeIcon) {
       themeToggle.addEventListener('click', function () {
-        document.body.classList.toggle('dark-mode');
-        document.body.classList.toggle('light-mode');
-        themeIcon.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        const isDark = document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode', !isDark);
+        themeIcon.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
       });
     }
   });
-
-document.body.classList.remove('dark-mode');
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-      document.body.classList.toggle('dark-mode');
-      document.getElementById('theme-icon').textContent =
-        document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-});
 
 document.addEventListener('DOMContentLoaded', function () {
         const successMessage = document.querySelector('.message.success');
