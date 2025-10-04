@@ -1,13 +1,5 @@
-/* === Default: Dark Mode === */
-/* :root {
-  --bg-color: #121212;
-  --text-color: gold;
-  --accent-color: gold;
-  --card-bg-color: #1e1e1e;
-  --link-color: gold;
-} */
-
-body.light-mode {
+/* light mode by default */
+body{
   --bg-color: #fff;
   --text-color: #000;
   --accent-color: #111;
@@ -149,6 +141,9 @@ main.content, .content {
   animation: blinker 1s linear infinite;
   margin-left: 20px;
   text-align: center;
+  position: absolute;
+  top: 15px;
+  right: 60px;
 }
 .register-btn:hover {
   box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.7);
@@ -365,18 +360,15 @@ h1 {
 .bento-item h2 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  font-family: 'Frijole', cursive;
   color: #854836;
   font-size: 2em;
   font-family: "Frijole";
   margin-bottom: 20px;
 }
 
-.bento-culture, .bento-tech, .bento-sports { 
-  border-left: 8px solid #f7b731;
+.bento-culture, .bento-tech, .bento-sports{ 
+  border-left: 8px solid #ffb22c;
 }
-/* .bento-tech { border-left: 8px solid #20bf6b; }
-.bento-sports { border-left: 8px solid #eb3b5a; } */
 
 .bento-item {
   display: flex;
@@ -511,6 +503,7 @@ h1 {
   text-align: center;
   margin-top: 30px;
 }
+
 .register-btn {
   background-color: #FFB22C;
   color: black;
@@ -527,6 +520,12 @@ h1 {
   background-color: #FFB22C;
   transform: scale(1.05);
 }
+
+.register-button-container .register-btn{
+  position: relative;
+  left: 10px;
+}
+
 
 /* ================= Gallery ================= */
 .gallery-preview {
@@ -850,4 +849,141 @@ footer span {
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* -------------------Theme change------------------------ */
+:root {
+  --navbar-bg: #fff;
+  --navbar-text: #222;
+  --body-bg: #f7f7fa;
+  --body-text: #222;
+  --accent-color: #2d6cdf;
+  --link-color: #2d6cdf;
+}
+
+body.dark-mode {
+  --navbar-bg: #041C32;
+  --navbar-text: #f7f7fa;
+  --body-bg: #04293A;
+  --body-text: #f7f7fa;
+  --accent-color: #ffb22c;
+  --link-color: #ffb22c;
+  background: var(--body-bg);
+  color: var(--body-text);
+  background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
+}
+
+.navbar {
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar-links li{
+  color: var(--link-color);
+  transition: color 0.3s;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: 16px;
+  color: var(--accent-color);
+  transition: color 0.3s;
+}
+
+body.dark-mode .theme-toggle-btn {
+  color: var(--accent-color);
+}
+
+body.dark-mode ul li {
+  color: var(--link-color);
+}
+
+body.dark-mode .register-btn {
+  background: var(--accent-color);
+  color: #222;
+}
+
+body.dark-mode .content h1{
+  color: var(--accent-color);
+}
+body.dark-mode .description-block {
+  background: var(--navbar-bg);
+  border-color: var(--accent-color);
+  color: var(--body-text);
+}
+
+body.dark-mode .guests-block h2{
+  color: var(--accent-color);
+}
+body.dark-mode .guest-box {
+  background: var(--navbar-bg);
+  border-color: var(--accent-color);
+  color: var(--body-text);
+}
+
+body.dark-mode .events-block h3{
+  color: var(--accent-color);
+}
+body.dark-mode .bento-item {
+  background: var(--navbar-bg);
+  box-shadow: 0 4px 24px rgba(255, 178, 44, 0.2);
+  color: var(--body-text);
+}
+body.dark-mode .bento-item .category-heading {
+  color: rgb(212, 187, 154);
+}
+
+body.dark-mode .bento-item li {
+  background: var(--navbar-bg);
+  color: var(--body-text);
+  border: 2px solid var(--accent-color);
+}
+body.dark-mode .bento-item li:hover {
+  background: var(--accent-color);
+  color: #222;
+  box-shadow: 0 4px 16px rgba(45,108,223,0.15);
+}
+
+body.dark-mode .gallery-preview {
+  background: var(--navbar-bg);
+  border-color: var(--accent-color);
+  color: var(--body-text);
+}
+body.dark-mode .gallery h2 {
+  color: var(--accent-color);
+}
+body.dark-mode footer {
+  background: var(--navbar-bg);
+  color: var(--body-text);
+  border-color: var(--accent-color);
+}
+body.dark-mode .golden-footer {
+  border-color: var(--accent-color);
+}
+body.dark-mode .footer-basics h3{
+  color: var(--accent-color);
+}
+body.dark-mode .footer-link {
+  color: var(--link-color);
+}
+body.dark-mode .form h2 {
+  color: var(--accent-color);
+}
+body.dark-mode .subscribe-item{
+  background: var(--navbar-bg);
+  color: var(--body-text);
+  border: 2px solid var(--accent-color);
+}
+body.dark-mode .subscribe-form button{
+  background-color: var(--accent-color);
+  color: #222;
+}
+body.dark-mode #backToTop,
+body.dark-mode #scrollToTop {
+  background: var(--accent-color);
+  color: #222;
 }
