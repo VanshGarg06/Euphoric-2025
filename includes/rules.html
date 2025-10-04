@@ -84,100 +84,80 @@
       </div>
     </div>
 
-    <script src="../assets/js/script.js"></script>
-    <script>
-      // Highlight clicked rule item
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".rules-section li").forEach(item => {
-          item.addEventListener("click", () => {
-            // remove active from all siblings in the same section
-            item.parentElement.querySelectorAll("li").forEach(li => li.classList.remove("active"));
-            // add active to clicked
-            item.classList.add("active");
-          });
+    <!-- General Rules -->
+    <div class="rules-section">
+      <h3><span class="icon">📌</span> General Rules</h3>
+      <ul>
+        <li>Individual student can participate max 2 events in each section.</li>
+        <li>Team events submission should be given by team captain only.</li>
+        <li>Proof of eligibility (ID card, student ID) may be required.</li>
+        <li>Registration must be completed before the specified deadline.</li>
+        <li>All required fields in the registration form must be filled correctly.</li>
+        <li>Participants must declare any medical conditions during registration.</li>
+      </ul>
+    </div>
+
+    <!-- Cultural Events -->
+    <div class="rules-section">
+      <h3><span class="icon">🎭</span> Cultural Events</h3>
+      <ul>
+        <li><a href="#">Dance (solo & group)</a></li>
+        <li><a href="#">Singing (solo & group)</a></li>
+        <li><a href="#">Rangoli</a></li>
+        <li><a href="#">Nukkad Natak</a></li>
+        <li><a href="#">Skit</a></li>
+        <li><a href="#">Poetry</a></li>
+        <li><a href="#">Mimicry</a></li>
+        <li><a href="#">Musical Instrument</a></li>
+      </ul>
+    </div>
+
+    <!-- Technical Events -->
+    <div class="rules-section">
+      <h3><span class="icon">⚙️</span> Technical Events</h3>
+      <ul>
+        <li><a href="#">LAN Game</a></li>
+        <li><a href="#">Crossword Puzzle</a></li>
+        <li><a href="#">Extempore</a></li>
+        <li><a href="#">Debate</a></li>
+        <li><a href="#">Ad Mad Show</a></li>
+      </ul>
+    </div>
+
+    <!-- Sports Events -->
+    <div class="rules-section">
+      <h3><span class="icon">🏆</span> Sports Events</h3>
+      <ul>
+        <li><a href="#">Cricket</a></li>
+        <li><a href="#">Volleyball</a></li>
+        <li><a href="#">Basketball</a></li>
+        <li><a href="#">Shot Put</a></li>
+        <li><a href="#">Race</a></li>
+        <li><a href="#">Tug of War</a></li>
+        <li><a href="#">Badminton</a></li>
+        <li><a href="#">Chess</a></li>
+        <li><a href="#">Carrom</a></li>
+        <li><a href="#">Long Jump</a></li>
+        <li><a href="#">Lemon Race</a></li>
+        <li><a href="#">Table Tennis</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="../assets/js/script.js"></script>
+  <script>
+    // Highlight clicked rule item
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".rules-section li").forEach(item => {
+        item.addEventListener("click", () => {
+          // remove active from all siblings in the same section
+          item.parentElement.querySelectorAll("li").forEach(li => li.classList.remove("active"));
+          // add active to clicked
+          item.classList.add("active");
         });
       });
-    </script>
-    
-      <!-- <div class="rules-container">
-          <div id="navbar-container"></div>
-          <div class="rules-block">
-              <h2>Rules</h2>
-
-              <div class="rules-section">
-                  <h3>General Rules</h3>
-                  <ul>
-                      <li class="gen-rule">Individual student can participate max 2 events in each section.</li>
-                      <li class="gen-rule">Team events submission should be given by team captain only.</li>
-                  </ul>
-              </div>
-
-              <div class="rules-section">
-                  <h3>Cultural Events</h3>
-                  <ul>
-                      <li><a href="#">Dance(solo & group)</a></li>
-                      <li><a href="#">Singing(solo & group)</a></li>
-                      <li><a href="#">Rangoli</a></li>
-                      <li><a href="#">Nukkad Natak</a></li>
-                      <li><a href="#">Skit</a></li>
-                      <li><a href="#">Poetry</a></li>
-                      <li><a href="#">Mimicry</a></li>
-                      <li><a href="#">Musical Instrument</a></li>
-                      </ul>
-              </div>
-
-              <div class="rules-section">
-                  <h3>Technical Events</h3>
-                  <ul>
-                      <li><a href="#">LAN game</a></li>
-                      <li><a href="#">Crossword Puzzle</a></li>
-                      <li><a href="#">Extempore</a></li>
-                      <li><a href="#">Debate</a></li>
-                      <li><a href="#">Ad Mad show</a></li>
-                      </ul>
-              </div>
-
-              <div class="rules-section">
-                  <h3>Sports Events</h3>
-                  <ul>
-                      <li><a href="#">Cricket</a></li>
-                      <li><a href="#">Volleyball</a></li>
-                      <li><a href="#">Basketball</a></li>
-                      <li><a href="#">Shot put</a></li>
-                      <li><a href="#">Race</a></li>
-                      <li><a href="#">Tug of war</a></li>
-                      <li><a href="#">Badminton</a></li>
-                      <li><a href="#">Chess</a></li>
-                      <li><a href="#">Carrom</a></li>
-                      <li><a href="#">Long jump</a></li>
-                      <li><a href="#">Lemon race</a></li>
-                      <li><a href="#">Table Tennis</a></li>
-                      </ul>
-              </div>
-
-          </div>
-      </div>
-  <script>
-    
-      fetch("navbar.html")
-          .then(res => res.text())
-          .then(data => {
-              document.getElementById("navbar-container").innerHTML = data;
-          });
-
-      
-      document.addEventListener('DOMContentLoaded', function () {
-          const successMessage = document.querySelector('.message.success');
-          if (successMessage) {
-              setTimeout(function () {
-                  successMessage.style.opacity = '0';
-                  setTimeout(function () {
-                      successMessage.style.display = 'none';
-                  }, 300);
-              }, 5000);
-          }
-      }); -->
-    <!-- </script> -->
-
-  </body>
+    });
+  </script>
+</body>
 </html>

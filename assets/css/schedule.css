@@ -85,3 +85,25 @@ td {
         font-size: 0.7em;
     }
 }
+
+/* -------------Dark Mode---------------- */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+body.dark-mode .schedule-block {
+    background-color: #1e1e1e;
+    border: 2px solid #FFB22C;
+    /* box-shadow: 0 0 15px 5px rgba(255, 178, 44, 0.3); */
+}
+body.dark-mode .schedule-block h2 {
+    color: #FFB22C;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); */
+}
+body.dark-mode th {
+    background-color: #ffb22c7e;
+    color: #854836;
+}
+body.dark-mode td {
+    color: #e0e0e0;
+}
