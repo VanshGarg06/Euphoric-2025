@@ -485,6 +485,14 @@ footer span {
   justify-content: space-evenly;
 }
 
+.footer-align {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: flex-start;
+  width: 600px;
+}
+
 .footer-left{
   display: flex;
   flex-direction: row;
