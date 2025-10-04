@@ -851,3 +851,186 @@ footer span {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+/* --------------Dark mode styling----------------- */
+
+body.dark-mode {
+  --bg-color: #04293A;
+  --text-color: #fff;
+  --accent-color: #ffb22c;
+  --card-bg-color: #041C32;
+  --link-color: #ffb22c;
+}
+body.dark-mode {
+background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
+  background-color: #04293A;
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  margin-top: 5%;
+}
+
+body.dark-mode .navbar {
+  background: #041C32;
+  color: var(--text-color);
+}
+body.dark-mode .navbar-links a {            
+  text-decoration: none;
+  color: var(--link-color);
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+body.dark-mode .navbar-links a:hover{
+  box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.7);
+}
+.theme-toggle-btn{
+  background: none;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2em;
+  position: absolute;
+  right: 170px;
+  color: var(--link-color);
+  transition: background-color 0.3s ease;
+}
+
+
+body.dark-mode .content h1{
+  color: var(--accent-color);
+}
+
+/* ---------description----------- */
+body.dark-mode .description-block {
+  background-color: var(--card-bg-color);
+  border: 4px solid #ffb22c;
+  color: white;
+}
+body.dark-mode .description-block p {
+  color: white;
+}
+
+/* ---------guests----------- */
+body.dark-mode .guests-block h2 {
+  color: var(--accent-color);
+}
+body.dark-mode .guest-box {
+  background-color: var(--card-bg-color);
+  border: 4px solid #ffb22c;
+  color: white;
+}
+
+/* ---------events----------- */
+body.dark-mode .events-block h3{
+  color: var(--accent-color);
+}
+body.dark-mode .bento-item {
+  background: var(--card-bg-color);
+  box-shadow: 0 4px 24px #544e4e;
+  color: white;
+}
+body.dark-mode .bento-item h2 {
+  color: #b3925ae0;
+}
+body.dark-mode .bento-culture, .dark-mode .bento-tech, .dark-mode .bento-sports { 
+  border-left: 8px solid #ffb22c;
+}
+body.dark-mode .bento-item li {
+  background: #041C32;
+  color: #ffffff;
+  border: 2px solid #ffb22c;
+}
+body.dark-mode .bento-item li:hover {
+  background: #ffb22c;
+  color: black;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.15);
+}
+body.dark-mode .register-btn {
+  background-color: #ffb22c;
+  color: black;
+}
+body.dark-mode .register-btn:hover {
+  background-color: #ffd700;
+}
+
+/* ------gallery-------- */
+body.dark-mode .gallery-preview {
+  background-color: var(--card-bg-color);
+  border: 4px solid #ffb22c;
+  color: white;
+}
+body.dark-mode .gallery h2 {
+  color: var(--accent-color);
+}
+body.dark-mode .view-more-btn {
+  background-color: #ffb22c;
+  color: #111;
+}
+body.dark-mode .view-more-btn:hover {
+  background-color: #ffd700;
+}
+
+/* -------footer------- */
+body.dark-mode footer {
+  background-color: #041C32;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+body.dark-mode .golden-footer {
+  border-top: 3px solid #ffb22c;
+  border-bottom: 3px solid #ffb22c;
+} 
+body.dark-mode .footer-basics h3{
+  color: #FFB22C;
+}
+body.dark-mode .footer-link {
+  color: #ffb22c;
+}
+body.dark-mode .footer-link:hover {
+  text-decoration: underline;
+}
+body.dark-mode .form h2 {
+  color: #FFB22C;
+}
+body.dark-mode .subscribe-item{
+  background-color: #041C32;
+  border: 3px solid #ffb22c;
+  color: white;
+}
+body.dark-mode .subscribe-form button{
+  background-color: #ffb22c;
+  color: black;
+}
+body.dark-mode .subscribe-form button:hover{
+  background-color: #ffd700;
+}
+body.dark-mode #backToTop,
+body.dark-mode #scrollToTop {
+  background: #ffb22c;
+  color: #111;
+}
+body.dark-mode #backToTop:hover,
+body.dark-mode #scrollToTop:hover { 
+  background: #ffd700;
+} 
+body.dark-mode #loading-screen {
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffb22c;
+}
+body.dark-mode .loader i {
+  color: #ffb22c;
+}
+body.dark-mode .loader h2 {
+  color: #ffb22c;
+}
+/* --------------End of Dark mode styling----------------- */
