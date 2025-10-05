@@ -107,3 +107,40 @@ td {
         font-size: 0.7em; /* Even smaller font size */
     }
 }
+
+/* -------------dark mode styles---------------- */
+
+body.dark-mode .coordinators-form {
+  background-color: #041C32;
+  border: 2px solid #f7b731;
+  color: #f7f7fa;
+}
+
+body.dark-mode .coordinator-block {
+  background-color: #193340;
+  color: #f7f7fa;
+  border: 1px solid #444;
+  box-shadow: 0 4px 24px #222;
+}
+
+body.dark-mode .coordinator-block h3 {
+  color: rgba(255, 218, 144, 0.816);
+}
+
+body.dark-mode table {
+  background: #23272b;
+  color: #f7f7fa;
+  border-color: #f7b731;
+}
+
+body.dark-mode th {
+  background-color: #0a2a4a;
+  color: #FFB22C;
+  border-color: rgba(247, 214, 148, 0.519);
+}
+
+body.dark-mode td {
+  background-color: #23272b;
+  color: #fff;
+  border-color: rgba(247, 214, 148, 0.519);
+}

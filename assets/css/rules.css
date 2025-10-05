@@ -229,3 +229,38 @@ body::before {
         font-size: 1.2em;
     }
 }
+
+/*-----------dark stylings---------------- */
+body.dark-mode .hero h2 {
+    color: #ffb22c;
+}
+body.dark-mode .hero p {
+    color: #ccc;
+}
+body.dark-mode .rules-block {
+    background-color: #041C32;
+    border: 2px solid #f7b731;
+    box-shadow: 0 0 15px 5px rgba(247, 183, 49, 0.3);
+    color: #f7f7fa;
+}
+body.dark-mode .rules-section {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+body.dark-mode .rules-section h3 {
+    color: #ffb22c;
+}
+body.dark-mode .rules-section li {
+    background: rgba(255, 255, 255, 0.05);
+}
+body.dark-mode .rules-section li:hover {
+    background: #ffb22c;
+    color: #000;
+}
+body.dark-mode .rules-section a {
+    color: #ccc;
+}
+body.dark-mode .rules-section a:hover {
+    color: #000;
+}
+
