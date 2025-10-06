@@ -1,6 +1,18 @@
 // Simple auth check: redirect to login if not authenticated
-if (!localStorage.getItem('isAuthenticated') && !window.location.pathname.endsWith('login.html') && !window.location.pathname.endsWith('signup.html')) {
-    window.location.href = 'login.html';
+// if (!localStorage.getItem('isAuthenticated') && !window.location.pathname.endsWith('login.html') && !window.location.pathname.endsWith('signup.html')) {
+//     window.location.href = 'login.html';
+// }
+
+if (
+  !localStorage.getItem('isAuthenticated') &&
+  !window.location.pathname.endsWith('login.html') &&
+  !window.location.pathname.endsWith('signup.html') &&
+  !window.location.pathname.endsWith('index.html') &&
+  !window.location.pathname.endsWith('rules.html') &&
+  !window.location.pathname.endsWith('event_listing.html') && 
+  !window.location.pathname.endsWith('rules.html')
+) {
+  window.location.href = 'login.html';
 }
 
 // Load Navbar
