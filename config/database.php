@@ -48,28 +48,39 @@ class Database {
     }
 
     private function createTables() {
-        $sql = "CREATE TABLE IF NOT EXISTS `lost_and_found` (
-            `id` int(11) NOT NULL AUTO_INCREMENT,
-            `title` varchar(150) NOT NULL,
-            `description` text NOT NULL,
-            `location` varchar(255) NOT NULL,
-            `date_found` date DEFAULT NULL,
-            `time_found` time DEFAULT NULL,
-            `image_path` varchar(255) DEFAULT NULL,
-            `contact_info` varchar(255) NOT NULL,
-            `status` enum('lost','found') NOT NULL DEFAULT 'lost',
-            `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-            PRIMARY KEY (`id`),
-            KEY `idx_status` (`status`),
-            KEY `idx_created_at` (`created_at`)
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci";
+    // Existing lost_and_found table creation...
+    $sql1 = "CREATE TABLE IF NOT EXISTS `lost_and_found` (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        `title` varchar(150) NOT NULL,
+        `description` text NOT NULL,
+        `location` varchar(255) NOT NULL,
+        `date_found` date DEFAULT NULL,
+        `time_found` time DEFAULT NULL,
+        `image_path` varchar(255) DEFAULT NULL,
+        `contact_info` varchar(255) NOT NULL,
+        `status` enum('lost','found') NOT NULL DEFAULT 'lost',
+        `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+        PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
 
-        try {
-            $this->conn->exec($sql);
-        } catch (PDOException $e) {
-            die("Table creation error: " . $e->getMessage());
-        }
+    $sql2 = "CREATE TABLE IF NOT EXISTS `users` (
+        `id` INT(11) NOT NULL AUTO_INCREMENT,
+        `name` VARCHAR(100) NOT NULL,
+        `email` VARCHAR(150) NOT NULL UNIQUE,
+        `password` VARCHAR(255) NOT NULL,
+        `role` ENUM('student','coordinator','admin') NOT NULL DEFAULT 'student',
+        `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
+
+    try {
+        $this->conn->exec($sql1);
+        $this->conn->exec($sql2);
+    } catch (PDOException $e) {
+        die("Table creation error: " . $e->getMessage());
     }
+}
+
 
     // Method to check if connection is valid
     public function isConnected() {
