@@ -979,12 +979,9 @@ body.dark-mode .navbar-links a:hover{
   background: none;
   color: black;
   border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+    border-radius: 5px;
   cursor: pointer;
   font-size: 2em;
-  position: absolute;
-  right: 170px;
   color: var(--link-color);
   transition: background-color 0.3s ease;
 }
